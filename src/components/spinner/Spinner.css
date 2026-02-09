@@ -1,0 +1,6 @@
+.spinner{
+    width: 200px;
+    height: 400px;
+    animation: forwards;
+    color: red;
+}

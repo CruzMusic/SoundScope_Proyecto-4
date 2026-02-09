@@ -1,0 +1,12 @@
+.button{
+    height: 75px;
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 50px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    font-family: "Thunder";
+    font-size: 20px;
+}
+

@@ -1,0 +1,101 @@
+.albumItem{
+    min-height: 220px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: rgb(41, 40, 39);
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(128, 0, 32, 0.5);
+}
+
+.albumItem img{
+    height: 90px;
+    width: 90px;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.albumItem h2{
+    font-family: "Asesino";
+    font-size: 20px;
+}
+
+.albumItem p{
+    font-family: "Thunder";
+    font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+
+    .albumItem {
+        width: 280px;
+        min-height: 210px;
+    }
+
+    .albumItem img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .albumItem h2 {
+        font-size: 19px;
+    }
+
+    .albumItem p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .albumItem {
+        width: 250px;
+        min-height: 200px;
+        margin-top: 20px;
+    }
+
+    .albumItem img {
+        height: 75px;
+        width: 75px;
+        border-width: 4px;
+    }
+
+    .albumItem h2 {
+        font-size: 18px;
+    }
+
+    .albumItem p {
+        font-size: 14px;
+        width: 190px;
+    }
+}
+
+@media (max-width: 480px) {
+    .albumItem {
+        width: 190px;
+        min-height: 160px;
+        gap: 5px; 
+        margin-top: 20px;
+        margin-right: 40px;
+        align-self: center;
+    }
+
+    .albumItem img {
+        height: 60px;
+        width: 60px;
+        border-width: 3px;
+        border-radius: 12px;
+    }
+
+    .albumItem h2 {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .albumItem p {
+        font-size: 12px;
+        width: 190px;
+    }
+}

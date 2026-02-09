@@ -1,0 +1,58 @@
+.searchBar{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+Input::placeholder{
+    font-family: "Thunder";
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (max-width: 1024px){
+    .searchBar {
+        width: 400px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px){
+    .searchBar {
+        width: 80%;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    input::placeholder{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px){
+.searchBar {
+        width: 85%;
+        height: 45px; 
+        margin-top: 15px;
+    }
+
+    .searchBar input {
+        width: 220px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .searchBar button {
+        width: 80px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    input::placeholder {
+        font-size: 14px;
+    }
+}
+

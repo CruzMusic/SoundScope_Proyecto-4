@@ -1,0 +1,77 @@
+footer{
+    min-height: 160px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(41, 40, 39);
+}
+
+footer h2{
+    font-family: "Asesino";
+    font-size: 35px;
+    color: black;
+}
+
+ul{
+    width: 800px;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    align-items: center;
+}
+
+ul a img{
+    height: 50px;
+    width: 50px;
+}
+
+ul a img:hover{
+    transform: scale(1.10);
+    text-shadow: 2px 2px 2px rgba(83, 79, 79, 0.4)
+}
+
+@media (max-width: 1024px) {
+    ul {
+        width: 400px;
+        align-self: center;
+    }
+    footer h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    ul {
+        width: 400px;
+        gap: 10px;
+        align-self: center;
+    }
+    footer h2 {
+        font-size: 25px;
+    }
+    ul a img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        width: 100%;
+        min-height: 120px;
+    }
+    footer h2 {
+        font-size: 20px;
+    }
+    ul {
+        width: 400px;
+        margin-top: 10px;
+        align-self: center;
+    }
+    ul a img {
+        height: 30px;
+        width: 30px;
+    }
+}

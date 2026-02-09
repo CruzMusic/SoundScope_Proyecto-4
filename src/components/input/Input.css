@@ -1,0 +1,14 @@
+.input{
+    height: 70px;
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 50px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border-right: none;
+    text-align: center;
+}
+
+.placeholder{
+    font-family: "Asesino";
+}
