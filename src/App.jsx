@@ -1,5 +1,5 @@
 import './App.css'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
 import Suggestions from './pages/suggestions/Suggestions'
 import Favourites from './pages/favourites/Favourites'
@@ -12,7 +12,7 @@ import Layout from './components/layout/Layout'
 function App() {
 
   return (
-  <div>
+  <>
     <FavouritesProvider>
   <Layout>
     <Routes>
@@ -23,7 +23,7 @@ function App() {
     </Routes>
   </Layout>
     </FavouritesProvider>
-  </div>
+  </>
   )
 }
 

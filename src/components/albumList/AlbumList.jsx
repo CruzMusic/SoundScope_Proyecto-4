@@ -1,4 +1,3 @@
-import React from 'react'
 import AlbumItem from '../albumItem/AlbumItem'
 
 const AlbumList = ({albums, className}) => {

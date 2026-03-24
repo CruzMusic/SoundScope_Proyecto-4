@@ -1,13 +1,17 @@
 .formDiv{
-    height: 800px;
-    width: 800px;
+    min-height: 800px;
+    height: auto;
+    width: min(800px, 92vw);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     background-color: rgb(44, 49, 49);
     box-shadow: 0px 10px 30px rgba(128, 0, 32, 0.5);
     border-radius: 20px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    overflow: visible;
 }
 
 .formDiv h2{
@@ -17,12 +21,21 @@
     border-radius: 20px;
 }
 
+.suggestionSubtitle{
+    width: 85%;
+    margin: 8px 0 16px;
+    text-align: center;
+    font-family: "Thunder";
+    font-size: 18px;
+}
+
 .suggestForm{
-    height: 600px;
+    height: auto;
     width: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 8px;
     
 }
 
@@ -35,7 +48,9 @@ label{
     height: 200px;
     border-radius: 40px;
     border: 4px solid rgba(128, 0, 32, 0.5);
-    text-align: center;
+    text-align: left;
+    padding: 12px 16px;
+    resize: none;
 }
 
 .inputForm{
@@ -44,6 +59,51 @@ label{
     height: 50px;
     text-align: center;
 }
+
+.inputError{
+    border-color: #ff6b6b;
+}
+
+.errorText{
+    margin: 0;
+    font-family: "Thunder";
+    font-size: 16px;
+    color: #ffb3b3;
+    text-align: center;
+}
+
+.hintText{
+    margin: 0;
+    text-align: right;
+    font-family: "Thunder";
+    font-size: 14px;
+    color: #d9d9d9;
+}
+
+.formMessage{
+    margin: 6px 0 0;
+    width: 100%;
+    align-self: center;
+    font-family: "Thunder";
+    font-size: 16px;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.successMessage{
+    color: #d6ffd8;
+    background-color: rgba(30, 110, 48, 0.35);
+    border: 1px solid rgba(122, 243, 141, 0.6);
+}
+
+.errorMessage{
+    color: #ffd7d7;
+    background-color: rgba(128, 0, 32, 0.35);
+    border: 1px solid rgba(255, 130, 130, 0.6);
+}
+
 
 .buttonForm{
     height: 75px;
@@ -66,12 +126,14 @@ label{
 
 @media (max-width: 1024px) {
     .formDiv {
-        width: 600px;
-        height: 600px;
+        width: min(600px, 92vw);
+        height: auto;
+        padding: 20px 0;
     }
 
     .suggestForm {
-        height: 450px;
+        height: auto;
+        gap: 8px;
     }
 
     .formDiv h2 {
@@ -81,13 +143,15 @@ label{
 
 @media (max-width: 768px) {
     .formDiv {
-        width: 500px;
-        height: 550px;
+        width: min(500px, 92vw);
+        height: auto;
+        padding: 20px 0;
     }
 
     .suggestForm {
         width: 250px;
-        height: 400px;
+        height: auto;
+        gap: 8px;
     }
 
     .inputSuggestion {
@@ -112,7 +176,8 @@ label{
         gap: 8px;
     }
 
-    .label {
+    .suggestionSubtitle {
+        width: 90%;
         font-size: 16px;
     }
 

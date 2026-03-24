@@ -1,9 +1,8 @@
 import "./Home.css"
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ArtistCard from '../../components/artistCard/ArtistCard'
 import SearchBar from '../../components/searchBar/SearchBar';
 import theAudioDB from '../../api/TheAudioDB';
-import Spinner from '../../components/spinner/Spinner';
 
 const Home = () => {
   const [ results, setResults ] = useState([]);
@@ -11,8 +10,6 @@ const Home = () => {
 
 
   const handleSearch = async (searchTerm) =>{
-    console.log("Buscando a:", searchTerm);
-    
     setLoading(true)
     const dataAPI = await theAudioDB(searchTerm);
     setResults(dataAPI.artists)
@@ -21,10 +18,14 @@ const Home = () => {
 
   return (
     <div className='home'>
+      <h3 className='homeTitle'>Welcome to SoundScope</h3>
       <SearchBar onSearch={handleSearch}/>
+      {!(results && results.length > 0) && (
+        <p className='homeSubtitle'>Find info about your favourite artist here.</p>
+      )}
       
       {loading ? (
-        <Spinner></Spinner>
+        <div className="spinner"></div>
       ) : (
         <>
           {results === null && <p className='notFound'>Artist not found</p>}

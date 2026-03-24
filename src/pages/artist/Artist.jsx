@@ -30,9 +30,9 @@ const Artist = () => {
   const albums = albumData?.album
   
   return (
-     <div>
+     <>
       <ArtistDetails artistInfo={artistInfo} albums={albums}></ArtistDetails>
-    </div>
+    </>
   )
 }
 

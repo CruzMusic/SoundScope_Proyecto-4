@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import FavouriteContext from '../../context/FavouriteContext'
 import ArtistCard from '../../components/artistCard/ArtistCard';
 import "./Favourites.css"
@@ -14,6 +14,7 @@ const Favourites = () => {
 
   return (
     <div className='favourites'>
+      <h2>Your favourite artists</h2>
       {favourites.length > 0 ? newFavourites : "No artist saved"} 
     </div>
   )

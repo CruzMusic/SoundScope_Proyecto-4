@@ -1,5 +1,5 @@
 import "./ArtistCard.css"
-import React, { memo, useCallback, useContext } from 'react'
+import { memo, useCallback, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import FavouriteContext from '../../context/FavouriteContext'
 import Button from '../button/Button'
@@ -18,16 +18,16 @@ const ArtistCard = (props) => {
    },[isFavourite, removeFavourite, addFavourite, artistData])
 
   return (
-    <div>
+    <>
       <div className='artist'>
-        <Link to={`/artist/${artistData.idArtist}`}>
+        <Link to={`/artist/${artistData.idArtist}`} aria-label={`Open details for ${artistData.strArtist}`}>
         <h2>{artistData.strArtist}</h2>
-        <img src={artistData.strArtistThumb} alt="" />
+        <img src={artistData.strArtistThumb} alt={`${artistData.strArtist} artist cover`} />
         </Link>
       </div>
         <Button className="artistButton" onClick={handleToogleFavourite} label={isFavourite(artistData.idArtist) ? "Remove Favourites" : "Add Favourites"}>
         </Button>
-    </div>
+    </>
   )
 }
 

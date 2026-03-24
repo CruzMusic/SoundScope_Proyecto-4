@@ -1,11 +1,9 @@
 import "./Input.css"
 
-import React from 'react'
-
 const Input = (props) => {
-    const {value, onChange, placeholder, className} = props
+    const {value, onChange, placeholder, className, type = "text", ariaLabel} = props
   return (
-    <input type="text" className={className} value={value} onChange={onChange} placeholder={placeholder}/>
+    <input type={type} className={className} value={value} onChange={onChange} placeholder={placeholder} aria-label={ariaLabel}/>
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import FavouriteContext from '../../context/FavouriteContext'
 import AlbumList from '../albumList/AlbumList'
 import Button from '../button/Button'
@@ -19,10 +19,10 @@ const ArtistDetails = (props) => {
     return (
         <div className='artistDiv'>
             <h1>{artistInfo.strArtist}</h1>
-            <img className='artistImg' src={artistInfo.strArtistThumb} alt="Artista" />
-            <p className='artistInfo'>{(artistInfo.strBiographyEN)?.slice(0)}</p>
+        <img className='artistImg' src={artistInfo.strArtistThumb} alt={`${artistInfo.strArtist} profile`} />
+            <p className='artistInfo'>{(artistInfo.strBiography)?.slice(0)}</p>
             <AlbumList albums={albums} />
-            <Button className="artistButton" onClick={handleToogleDetails} label={isFavourite(artistInfo.idArtist) ? "Quitar de favoritos" : "Añadir a favoritos"}>
+        <Button className="artistButton" onClick={handleToogleDetails} label={isFavourite(artistInfo.idArtist) ? "Remove from favourites" : "Add to favourites"}>
         </Button>
         </div>
     )
